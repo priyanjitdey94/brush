@@ -2,9 +2,12 @@
   "name": "brush",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production",
+    "lint": "npx eslint src/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/priyanjitdey94/brush/issues"
   },
-  "homepage": "https://github.com/priyanjitdey94/brush#readme"
+  "homepage": "https://github.com/priyanjitdey94/brush#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }
